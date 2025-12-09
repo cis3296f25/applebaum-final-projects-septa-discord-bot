@@ -1,6 +1,6 @@
 <div align="center">
 
-# Project Name
+# SEPTA Discord Bot
 [![Jira](https://img.shields.io/badge/Jira-KAN%20Board-blue)](https://tul32674.atlassian.net/jira/software/projects/KAN/boards/1)
 [![Deploy Docs](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://applebaumian.github.io/tu-cis-4398-docs-template/)

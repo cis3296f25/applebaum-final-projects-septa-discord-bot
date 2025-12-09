@@ -15,29 +15,63 @@ Section #, as well as any words that quickly give your peers insights into the a
 
 ## Project Abstract
 
-This document proposes a novel application of a text message (SMS or Email) read-out and hands-free call interacted between an Android Smartphone and an infotainment platform (headunit) in a car environment. When a phone receives an SMS or Email, the text message is transferred from the phone to the headunit through a Bluetooth connection. On the headunit, user can control which and when the received SMS or E-mail to be read out through the in-vehicle audio system. The user may press one button on the headunit to activate the hands-free feature to call back the SMS sender.
+This project delivers a Discord bot that provides real-time SEPTA Regional Rail information to commuters. The bot integrates with SEPTA’s public APIs to display live train statuses, delays, station arrivals, outage alerts, and next-train predictions. Users can also subscribe to specific train lines and automatically receive notifications about delays or service interruptions. The goal is to create a simple, accessible, and community-friendly tool for anyone who uses SEPTA transit.
 
 ## High Level Requirement
 
-Describe the requirements – i.e., what the product does and how it does it from a user point of view – at a high level.
+The SEPTA Discord Bot must:
 
+- Allow users to request real-time information using slash commands.
+- Provide regional rail line status, station arrivals, and next train times.
+- Handle user subscriptions and send automated delay/outage alerts.
+- Normalize and validate station names for user-friendly interaction.
+- Operate asynchronously to support multiple users simultaneously.
+- Run reliably on Discord 24/7 with minimal manual intervention.
+
+  
 ## Conceptual Design
 
-Describe the initial design concept: Hardware/software architecture, programming language, operating system, etc.
+- **Platform:** Discord  
+- **Language:** Python  
+- **Framework:** discord.py (with app_commands for slash commands)  
+- **Architecture:**  
+  - API Integration Layer (fetches SEPTA data via aiohttp)  
+  - Command Handlers (slash commands such as /next_train, /check_line_status)  
+  - Subscription System (stores user preferences and triggers alerts)  
+  - Background Task Cog (periodically checks for outages or delays)  
+The bot runs on an asynchronous event loop, enabling fast API calls and real-time interactions with multiple users.
 
 ## Background
 
-The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.
+SEPTA provides public real-time transit data through its APIs, but they are not always easy for riders—especially students—to navigate quickly. Existing tools like TrainView and NextToArrive work, but require manual refreshing and provide inconsistent formatting.
+
+Discord, widely used by student groups and communities, provides an ideal platform to centralize SEPTA information in a simple interface. Similar transport bots exist for NYC MTA and other transit systems, but no modern Discord tool exists for SEPTA.
+
+This project aims to create a reliable, convenient, and user-friendly alternative tailored to SEPTA commuters.
 
 ## Required Resources
 
-Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
+**Software:**
+- Python 3.10+
+- discord.py library
+- aiohttp for API calls
+- SEPTA public API (no key required)
+- GitHub Actions (for documentation deployment)
+
+**Knowledge Requirements:**
+- Asynchronous programming (async/await)
+- REST API consumption
+- JSON parsing
+- Python classes and cogs (Discord bot architecture)
+
+**Hardware:**
+- None beyond a standard development environment.
 
 ## Collaborators
+- Justin Pham
+- Jerry Lin
+- Christine Kapp
+- Chris Breeden
+- Fares Hagos
 
-<div align="center">
 
-[//]: # (Replace with your collaborators)
-[Ian Tyler Applebaum](https://github.com/ApplebaumIan) • [Kyle Dragon Lee](https://github.com/leekd99)
-
-</div>

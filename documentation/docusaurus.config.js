@@ -39,7 +39,7 @@ const baseUrl = process.env.PROJECT_NAME || "docs-dev-mode";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   /*TODO: Change to your project's title and tagline*/
-  title: title,
+  title: 'SEPTA Discord Bot',
   tagline: 'Owls are cool',
   /*Unless you move this website to a seperate repo don't change url and baseurl.*/
   url: 'https://'+process.env.ORG_NAME+'.github.io/',
@@ -127,7 +127,7 @@ const config = {
       }} : {}),
       navbar: {
         /*TODO: Change to your project's title*/
-        title: title,
+        title: 'SEPTA Discord Bot',
         logo: {
           alt: 'My Site Logo',
           src: logo,
